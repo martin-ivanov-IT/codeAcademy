@@ -1,0 +1,42 @@
+// 13*) Намерете броя на позициите на битовете в които две
+// числа се различават.
+
+#include <stdio.h>
+int vzemiBitna(int a, int pos);
+ int countBits(int n); 
+int main(){
+    int a = 1773;
+    int count = 0;
+    int iterations = countBits(a);
+    for (int i = 0; i < iterations; i++)
+    {
+        if (vzemiBitna(a,i)!=(vzemiBitna(a,i+1)))
+        {
+            count++;
+            i++;
+          
+        }
+        
+        
+    }
+    printf("%d",count);
+    
+}
+
+int vzemiBitna(int a, int pos){
+    int h = 1;
+    a = a>>pos;
+    a = a & h;
+    return a;
+}
+
+int countBits(int n) 
+{ 
+    int count = 0; 
+   while (n) 
+   { 
+        count++; 
+        n >>= 1; 
+    } 
+    return count; 
+} 

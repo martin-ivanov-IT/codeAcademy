@@ -1,0 +1,38 @@
+// 9) Направете на нула битовете в числа, намиращи се на
+// позиции между 3 и 7.
+#include <stdio.h>
+int iz4istiBitna(int a, int pos);
+unsigned int countBits(int n); 
+int main(){
+    int a = 31;
+    unsigned int count = countBits(a);
+    for (int i = 3; i <=7; i++)
+    {
+        if (count < i)
+        {
+            break;
+        }
+        
+        a = iz4istiBitna(a, i);
+    }
+    
+    printf("%d", a);
+    
+    
+}
+
+int iz4istiBitna(int a, int pos){
+    a &= ~(1 << pos);
+    return a;
+}
+
+unsigned int countBits(int n) 
+{ 
+   unsigned int count = 0; 
+   while (n) 
+   { 
+        count++; 
+        n >>= 1; 
+    } 
+    return count; 
+} 

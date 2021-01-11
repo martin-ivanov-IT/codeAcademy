@@ -1,0 +1,16 @@
+// 4) Създайте функция vdigniBitNa. Тя получава
+// следните параметри - число и индекс. Функцията трябва
+// да "вдига" бита на съответния индекс в числото (под
+// "вдига" ще разбираме да му присвои стойност 1)
+
+#include <stdio.h>
+int vdigniBitNa(int a, int pos);
+int main(){
+    printf("%d",vdigniBitNa(6,0));
+    return 0;
+}
+
+int vdigniBitNa(int a, int pos){
+    a |= 1 << pos;
+    return a;
+}

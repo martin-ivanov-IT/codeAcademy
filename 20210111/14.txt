@@ -1,0 +1,33 @@
+// 14*) Обърнете битовете на число, които се намират на
+// нечетна позиция
+
+#include <stdio.h>
+int obarniBitNa(int a, int pos);
+ int countBits(int n); 
+int main(){
+    int a = 10;
+    int iterations = countBits(a);
+    for (int i = 1; i < iterations; i+=2)
+    {
+        a = obarniBitNa(a, i);
+        
+    }
+    printf("%d",a);
+    
+}
+
+int obarniBitNa(int a, int pos){
+    a ^= 1 << pos;
+    return a;
+}
+
+int countBits(int n) 
+{ 
+    int count = 0; 
+   while (n) 
+   { 
+        count++; 
+        n >>= 1; 
+    } 
+    return count; 
+} 

@@ -1,0 +1,33 @@
+// 10) Премахнете всички битове на число след n-тия бит
+// включително.
+#include <stdio.h>
+int iz4istiBitna(int a,  int pos);
+int countBits(int n); 
+int main(){
+    int a = 100;
+    int iterations = countBits(a);
+    int n = 2;
+    for (int i = n; i <= iterations; i++)
+    {
+        a = iz4istiBitna(a, i);
+        
+    }
+    printf("%d",a);
+    
+}
+
+int iz4istiBitna(int a, int pos){
+    a &= ~(1 << pos);
+    return a;
+}
+
+int countBits(int n) 
+{ 
+    int count = 0; 
+    while (n) 
+    { 
+        count++; 
+        n >>= 1; 
+    } 
+    return count; 
+} 

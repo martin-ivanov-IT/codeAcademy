@@ -1,0 +1,12 @@
+// 6) Променете стойността на бита на дадено число на
+// определена позиция
+
+#include <stdio.h>
+
+int main(){
+    int number = 5;
+    int position = 2;
+    number ^= 1 << position;
+    return 0;
+}
+

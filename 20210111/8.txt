@@ -1,0 +1,23 @@
+// 8) Намерете позицията на най-старшия бит, който е със
+// стойност 1 в дадено число
+#include <stdio.h>
+int iz4istiBitna(int a, unsigned int pos);
+unsigned int countBits(int n); 
+int main(){
+    int a = 10;
+    unsigned int count = countBits(a);
+    printf("%d",count - 1);
+    
+    
+}
+
+unsigned int countBits(int n) 
+{ 
+   unsigned int count = 0; 
+   while (n) 
+   { 
+        count++; 
+        n >>= 1; 
+    } 
+    return count; 
+} 

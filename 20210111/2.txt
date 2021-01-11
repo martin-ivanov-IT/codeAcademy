@@ -1,0 +1,17 @@
+// 2) Създайте функция vzemiBitna. Функцията получава
+// параметър число и индекс. Тя връща стойността на бита
+// на съответния индекс
+#include <stdio.h>
+int vzemiBitna(int a, int pos);
+int main(){
+    int a = 5;
+    printf("%d",vzemiBitna(a,0));
+    return 0;
+}
+
+int vzemiBitna(int a, int pos){
+    int h = 1;
+    a = a>>pos;
+    a = a & h;
+    return a;
+}

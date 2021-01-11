@@ -1,0 +1,36 @@
+// 12) Вдигнете всички битове на число, на позиции делящи
+// се на 3.
+#include <stdio.h>
+
+int countBits(int n); 
+int vdigniBitNa(int a, int pos);
+int main(){
+    int a = 16;
+    int iterations = countBits(a);
+    
+   for (int i = 3; i < iterations; i+=3)
+   {
+      a = vdigniBitNa(a, i);
+   }
+   printf("%d",a);
+   
+    return 0;
+}
+
+
+
+int countBits(int n) 
+{ 
+    int count = 0; 
+    while (n) 
+    { 
+        count++; 
+        n >>= 1; 
+    } 
+    return count; 
+} 
+
+int vdigniBitNa(int a, int pos){
+    a |= 1 << pos;
+    return a;
+}

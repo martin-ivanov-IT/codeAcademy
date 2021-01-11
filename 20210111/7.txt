@@ -1,0 +1,33 @@
+// 7) Занулете всички битове на числата, намиращи се на
+// четна позиция.
+
+#include <stdio.h>
+int iz4istiBitna(int a, unsigned int pos);
+unsigned int countBits(int n); 
+int main(){
+    int a = 10;
+    unsigned int iterations = countBits(a);
+    for (int i = 1; i <= iterations; i+=2)
+    {
+        a = iz4istiBitna(a, i);
+        
+    }
+    printf("%d",a);
+    
+}
+
+int iz4istiBitna(int a, unsigned pos){
+    a &= ~(1 << pos);
+    return a;
+}
+
+unsigned int countBits(int n) 
+{ 
+   unsigned int count = 0; 
+   while (n) 
+   { 
+        count++; 
+        n >>= 1; 
+    } 
+    return count; 
+} 
