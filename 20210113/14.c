@@ -21,6 +21,6 @@ int main(){
     printf("the size of double e is ");
     printf("%d\n",sizeof(e));
 
-    return 0;xZ
+    return 0;xZса
 
 }
