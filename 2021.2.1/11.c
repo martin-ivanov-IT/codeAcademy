@@ -1,3 +1,6 @@
+// Задача 11 напишете функция void squeeze(char s[], int c), която
+// премахва символа с от низа s[]
+
 #include <string.h>
 #include <stdio.h>
 void squeeze(char s[], int c);

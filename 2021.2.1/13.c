@@ -1,3 +1,6 @@
+// Задача 13 напишете функцията void lower(char s[]), която
+// преобразува главните букви в малки.
+
 #include <string.h>
 #include <stdio.h>
 void lower(char s[]);

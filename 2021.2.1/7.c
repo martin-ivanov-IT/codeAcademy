@@ -1,3 +1,5 @@
+// Задача 7. Напишете функция, която прави същото, както в задача
+// 6, но е рекурсивна
 #include <stdio.h>
 int sum30(int start, int end, int sum);
 int main(){
