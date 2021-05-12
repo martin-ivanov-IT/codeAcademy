@@ -1,0 +1,20 @@
+1
+mkdir projects
+cd projects
+ls house*
+
+2
+mkdir houses
+touch houses/doors/bifold.txt
+cd houses
+touch bung.txt
+
+mkdir outdoor
+cd outdoor
+mkdir vegetation
+cd vegetation
+touch landscape.txt
+
+cp house{6..8} houses
+rm -f house{6..8}
+
