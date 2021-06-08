@@ -1,0 +1,5 @@
+for var in "$@"
+do
+    touch /home/$var
+    echo "$var"
+done
