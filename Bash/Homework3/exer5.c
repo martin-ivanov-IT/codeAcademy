@@ -21,8 +21,6 @@ int main(int argc, char* argv[]){
     if(s == NULL || t == NULL){
         return 1;
     }
-    // char str[100] = "Hello";
-    // char t[100] = " world";
 
     if(our_strcat(s,t)){
         exit(2);
