@@ -13,35 +13,39 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-int our_strcat(char *t, char *s);
+int our_strcat(char *t, char *s, char* concat);
 
 int main(int argc, char* argv[]){
     char* s = argv[1];
     char* t = argv[2];
+    char* concat = malloc(strlen(s) + strlen(t) +1); 
     if(s == NULL || t == NULL){
         return 1;
     }
+    // char str[100] = "Hello";
+    // char t[100] = " world";
 
-    if(our_strcat(s,t)){
+    if(our_strcat(s,t, concat)){
         exit(2);
     }
-    printf("%s\n",s);
+    printf("%s\n",concat);
 
  return 0;
 }
 
-int our_strcat(char *t, char *s){
+int our_strcat(char *t, char *s, char* concat){
     if(s == NULL || t == NULL){
         return 2;
     }
     int firstCount = strlen(t);
     int secondCount = strlen(s);
-    t[firstCount++] = ' ';
+    strcpy(concat, t);
+    concat[firstCount++] = ' ';
     for (int i = 0; i < secondCount; i++)
     {
-        t[firstCount++] = s[i];
+        concat[firstCount++] = s[i];
     }
-    t[firstCount] = '\0';
+    concat[firstCount] = '\0';
     return 0;
     
 }
