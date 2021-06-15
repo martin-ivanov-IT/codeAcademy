@@ -27,6 +27,7 @@ int main(int argc, char* argv[]){
         exit(2);
     }
     printf("%s\n",concat);
+    free(concat);
 
  return 0;
 }
